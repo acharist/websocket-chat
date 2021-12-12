@@ -1,0 +1,26 @@
+.form {
+    width: 100%;
+    display: flex;
+}
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #F4F7F9;
+    border: none;
+    padding: 20px;
+    outline: none;
+    color: #79797B;
+}
+
+.input::placeholder {
+    color: #79797B;
+}
+
+.button {
+    background-color: #F4F7F9;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 40px;
+}

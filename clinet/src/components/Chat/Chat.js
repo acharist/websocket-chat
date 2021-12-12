@@ -47,10 +47,6 @@ function Chat() {
     }
   }, [chatFormState, chatFormDispatch, ws]);
 
-  useEffect(() => {
-    console.log("chatFormState", chatFormState);
-  }, [chatFormState]);
-
   return (
     <div className="chat">
       <Header />

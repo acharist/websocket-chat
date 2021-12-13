@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react";
+import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
@@ -15,17 +15,17 @@ function Form({ ws }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(ws.connection) {
-      ws.connection.send(userText.value);
-      chatFormDispatch({ type: "messageSubmitted", payload: `sent: ${userText.value}` });
-    } else {
-      alert("ERROR: Not connected... refresh to try again!");
+    try {
+      if(ws.connection) {
+        ws.connection.send(userText.value);
+        chatFormDispatch({ type: "messageSubmitted", payload: `sent: ${userText.value}` });
+      } else {
+        alert("ERROR: Not connected... refresh to try again!");
+      }
+    } catch(err) {
+      alert(`ERROR: ${err}`);
     }
   };
-
-  useEffect(() => {
-    chatFormDispatch({ type: "userTyped", payload: userText.value });
-  }, [userText.value, chatFormDispatch]);
 
   return (
     <form className="form" onSubmit={handleSubmit}>

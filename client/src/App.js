@@ -12,7 +12,7 @@ import Chat from "./components/Chat/Chat";
 import "./App.css";
 
 function App() {
-  const initialState = { userTyped: '', messages: [] };
+  const initialState = { messages: [] };
   const [chatFormState, chatFormDispatch] = useReducer(
     chatFormReducer,
     initialState

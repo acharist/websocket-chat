@@ -1,13 +1,7 @@
 import { useReducer } from "react";
-
-// Reducers
-import chatFormReducer from "./reducers/chatForm";
-
-// Contexts
-import ChatFormContext from "./contexts/chatForm";
-
-// Components
-import Chat from "./components/Chat/Chat";
+import chatFormReducer from "@/reducers/chatForm";
+import ChatFormContext from "@/contexts/chatForm";
+import Chat from "@/components/Chat/Chat";
 
 import "./App.css";
 

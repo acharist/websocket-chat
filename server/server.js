@@ -12,12 +12,14 @@ wss.on('connection', (ws) => {
       }
     });
   });
+
   ws.on('close', () => {
     console.log(`Client ${ws.id} has disconnected!`);
   });
-  ws.onerror = function () {
+
+  ws.on('error', () => {
     console.log('Some Error occurred');
-  };
+  })
 });
 
 console.log(`The WebSocket server is running on port ${port}`);

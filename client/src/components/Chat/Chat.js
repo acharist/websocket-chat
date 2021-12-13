@@ -1,10 +1,8 @@
+import { useContext, useEffect, useMemo } from "react";
+import ChatFormContext from "@/contexts/chatForm";
+import Content from "./components/Content/Content";
 import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
-import Content from "./components/Content/Content";
-
-import ChatFormContext from "../../contexts/chatForm";
-
-import { useContext, useEffect, useMemo } from "react";
 
 import "./Chat.css";
 

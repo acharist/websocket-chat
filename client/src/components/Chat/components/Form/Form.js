@@ -1,10 +1,8 @@
 import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-
-import useInput from "../../../../hooks/useInput";
-
-import ChatFormContext from "../../../../contexts/chatForm";
+import useInput from "@/hooks/useInput";
+import ChatFormContext from "@/contexts/chatForm";
 
 import "./Form.css";
 
